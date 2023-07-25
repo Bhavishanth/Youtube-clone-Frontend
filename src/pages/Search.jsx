@@ -17,7 +17,7 @@ const Search = () => {
 
   useEffect(() => {
     const fetchVideos = async () => {
-      const res = await axios.get(`${be_url}/videos/search${query}`);
+      const res = await axios.get(`/videos/search${query}`);
       setVideos(res.data);
     };
     fetchVideos();
