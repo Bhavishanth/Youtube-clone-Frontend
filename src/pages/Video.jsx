@@ -16,7 +16,7 @@ import { format } from "timeago.js";
 import { subscription } from "../redux/userSlice";
 import Recommendation from "../components/Recommendation";
 import { be_url } from "../consturl";
-import Cookies from "js-cookie";
+
 
 const Container = styled.div`
   display: flex;
