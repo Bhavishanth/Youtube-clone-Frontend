@@ -149,7 +149,7 @@ const Video = () => {
     dispatch(like(currentUser?._id));
   };
   const handleDislike = async () => {
-    await axios.put(`/users/dislike/${currentVideo?._id}`);
+    await axios.put(`/users/dislike/${currentVideo?._id}`, { headers: { access_token: window.localStorage.getItem('access_token') } });
     dispatch(dislike(currentUser?._id));
   };
 
