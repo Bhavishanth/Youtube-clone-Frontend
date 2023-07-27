@@ -14,7 +14,7 @@ const Home = ({type}) => {
 
   useEffect(() => {
     const fetchVideos = async () => {
-      const res = await axios.get(`/videos/${type}`);
+      const res = await axios.get(`/videos/${type}`, { headers: { access_token: window.localStorage.getItem('access_token') } });
       setVideos(res.data);
     };
     fetchVideos();

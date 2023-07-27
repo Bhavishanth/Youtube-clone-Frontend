@@ -11,6 +11,10 @@ import { BrowserRouter as Router } from 'react-router-dom';
 
 axios.defaults.baseURL = 'https://yt-be-server.onrender.com/api/';
 
+axios.defaults.headers = {
+  access_token: window.localStorage.getItem('access_token')
+}
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   

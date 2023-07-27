@@ -142,7 +142,7 @@ const Video = () => {
   }, [path, dispatch]);
 
   const handleLike = async () => {
-    await axios.put(`/users/like/${currentVideo?._id}`,{}, 
+    await axios.put(`/users/like/${currentVideo?._id}`,{ headers: { access_token: window.localStorage.getItem('access_token') } }, 
     {
      
     });
